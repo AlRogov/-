@@ -1,12 +1,15 @@
 class House:
-    def __init__(self):
-        self.numberOfFloors = [0]
+    def __init__(self, floors):
+        self.numberOfFloors = 0
+        self.newfloor = floors
 
-    def set_new_number_of_floors(self, floors):
-        print('Этаж:', floors)
-        for floors in self.numberOfFloors:
-            print('Следующий этаж:', floors)
+    def floor(self):
+        print(f'Я нахожусь на {self.numberOfFloors} этаже')
 
+    def setNewNumberOfFloors(self):
+        self.newfloor += 1
+        print(f'Теперь я на {self.newfloor} этаже')
 
-house = House()
-house.set_new_number_of_floors(floors=2)
+etazh = House(0)
+etazh.floor()
+etazh.setNewNumberOfFloors()
